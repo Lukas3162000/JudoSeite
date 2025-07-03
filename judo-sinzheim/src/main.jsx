@@ -9,6 +9,7 @@ import Training from "./Pages/Training"
 import Probetraining from "./Pages/Probetraining"
 import Kontakt from "./Pages/Kontakt"
 import NotFound from "./Pages/NotFound"
+import UnserVerein from "./Pages/UnserVerein";
 
 import "./index.css"
 
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route index element={<Startseite />} />
           <Route path="training" element={<Training />} />
           <Route path="probetraining" element={<Probetraining />} />
+          <Route path="UnserVerein" element={<UnserVerein />} />
           <Route path="kontakt" element={<Kontakt />} />
           <Route path="*" element={<NotFound />} />
         </Route>

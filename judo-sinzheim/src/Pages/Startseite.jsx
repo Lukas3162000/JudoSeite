@@ -1,23 +1,13 @@
 import { useState } from 'react'
 import React from 'react'
+import HeroSection from '../components/Herosection'
 
 export default function Startseite() {
 
   return (
     <>
-      <section className="text-center py-12 px-4 bg-gray-100">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-4">
-          Judo in Sinzheim – für Kinder & Erwachsene
-        </h1>
-        <p className="text-lg text-gray-700 mb-6 max-w-xl mx-auto">
-          Unser Verein bietet ein sicheres, sportliches Umfeld für Anfänger:innen und Fortgeschrittene – jetzt Probetraining vereinbaren!
-        </p>
-        <a
-          href="#/probetraining"
-          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition"
-        >
-          Jetzt Probetraining
-        </a>
+      <section>
+        <HeroSection/>
       </section>
 
       <section className="py-12 px-4 max-w-3xl mx-auto text-center">
