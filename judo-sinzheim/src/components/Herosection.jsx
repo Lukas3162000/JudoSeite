@@ -31,11 +31,11 @@ export default function HeroSection() {
       <div className="flex gap-4 flex-col md:flex-row items-center">
 
         <Link to="/Training">
-         <button className="bg-[#E10000] cursor-pointer text-white px-12 border-2 border-color-white py-2 rounded-full font-semibold">Training</button>
+         <button className="bg-[#E10000] hover:scale-105 ease-in-out duration-300 cursor-pointer text-white px-12 border-2 border-color-white py-2 rounded-full font-semibold">Training</button>
         </Link>
 
         <Link to="/Kontakt">
-          <button className="border cursor-pointer border-white text-white px-4 py-2 rounded-full font-semibold">Kontakt & Anfahrt</button>
+          <button className="border cursor-pointer hover:scale-105 ease-in-out duration-300 border-white text-white px-4 py-2 rounded-full font-semibold">Kontakt & Anfahrt</button>
         </Link>
       </div>
       

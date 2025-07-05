@@ -1,98 +1,107 @@
 import React, { useState } from "react";
 
+import SmallHeroSection from '../components/SmallHeroSection'
+
 export default function UnserVerein() {
   return (
-    <div className="px-4 md:px-12 py-10 space-y-10 max-w-5xl mx-auto text-gray-800">
-      {/* Hero Section */}
-      <section className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Unser Verein</h1>
-        <p className="text-lg">
-          Zu Ehren von <strong>Harald Schneider</strong>, Gründer und erster Vorsitzender des Judo Club Sinzheim e.V.
-        </p>
-      </section>
 
-      {/* Historie */}
-      <Card>
-        <CardContent className="p-6">
-          <h2 className="text-2xl font-semibold mb-4">Unsere Geschichte</h2>
-          <p className="mb-4">
-            Die Wurzeln unseres Vereins reichen bis ins Jahr 1997 zurück, als erste Judo-Kurse unter dem Dach des Turnerbunds Sinzheim entstanden. 
-            Aufgrund wachsender Nachfrage und struktureller Differenzen entschloss sich eine engagierte Gemeinschaft zur Gründung eines eigenständigen Vereins:
+    <>
+      <SmallHeroSection Title={"Unser Verein"} subline={<> Zu Ehren von <strong className="font-semibold">Harald Schneider</strong>, Gründer und erster Vorsitzender des Judo Club Sinzheim e.V.</>}/>
+
+      <div className="px-4 md:px-12 py-10 space-y-10 max-w-5xl mx-auto text-gray-800">
+        {/* Hero Section */}
+        <section className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Unser Verein</h1>
+          <p className="text-lg">
+            Zu Ehren von <strong>Harald Schneider</strong>, Gründer und erster Vorsitzender des Judo Club Sinzheim e.V.
           </p>
-          <ul className="list-disc list-inside space-y-1">
-            <li>2007 Gründung des Judo Club Sinzheim e.V.</li>
-            <li>Eröffnung des Dojos im Kloster St. Vinzens mit 102 m² Mattenfläche</li>
-            <li>Schneller Mitgliederzuwachs & erste sportliche Erfolge</li>
-          </ul>
-        </CardContent>
-      </Card>
+        </section>
 
-      {/* Philosophie */}
-      <Card>
-        <CardContent className="p-6">
-          <h2 className="text-2xl font-semibold mb-4">Unsere Philosophie</h2>
-          <p className="mb-4">
-            Judo bedeutet "Der sanfte Weg" – diese Haltung prägt unsere Arbeit mit Kindern, Jugendlichen und Erwachsenen:
-          </p>
-          <ul className="list-disc list-inside space-y-1">
-            <li>Respektvolles Miteinander & gegenseitige Unterstützung</li>
-            <li>Transparente Trainingsmethoden</li>
-            <li>Nachhaltige Förderung sowohl im Breiten- als auch im Leistungssport</li>
-            <li>Familiäre Vereinsstruktur mit maximal 100 Judoka</li>
-            <li>Regelmäßige Weiterbildung der Trainer</li>
-            <li>Gruppenübergreifende Aktionen wie Judosafaris & Freundschaftsturniere</li>
-          </ul>
-        </CardContent>
-      </Card>
+        {/* Historie */}
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-4">Unsere Geschichte</h2>
+            <p className="mb-4">
+              Die Wurzeln unseres Vereins reichen bis ins Jahr 1997 zurück, als erste Judo-Kurse unter dem Dach des Turnerbunds Sinzheim entstanden. 
+              Aufgrund wachsender Nachfrage und struktureller Differenzen entschloss sich eine engagierte Gemeinschaft zur Gründung eines eigenständigen Vereins:
+            </p>
+            <ul className="list-disc list-inside space-y-1">
+              <li>2007 Gründung des Judo Club Sinzheim e.V.</li>
+              <li>Eröffnung des Dojos im Kloster St. Vinzens mit 102 m² Mattenfläche</li>
+              <li>Schneller Mitgliederzuwachs & erste sportliche Erfolge</li>
+            </ul>
+          </CardContent>
+        </Card>
 
-      {/* Satzung */}
-      <Card>
-        <CardContent className="p-6">
-          <h2 className="text-2xl font-semibold mb-4">Unsere Satzung</h2>
-          <Accordion type="multiple">
-            <AccordionItem value="zweck" title="§2 Vereinszweck & Gemeinnützigkeit">
-              <p>
-                Zweck des Vereins ist die Förderung des Judosports. Der Verein ist gemeinnützig und arbeitet selbstlos.
-              </p>
-            </AccordionItem>
-            <AccordionItem value="mitgliedschaft" title="§4 Mitgliedschaft">
-              <p>
-                Mitglied kann jede unbescholtene Person werden. Minderjährige benötigen die Zustimmung der Eltern.
-              </p>
-            </AccordionItem>
-            <AccordionItem value="vorstand" title="§9 Vorstand & Geschäftsbereiche">
-              <p>
-                Der Vorstand setzt sich aus mehreren Ämtern zusammen und wird alle zwei Jahre gewählt.
-              </p>
-            </AccordionItem>
-            <AccordionItem value="auflösung" title="§13 Auflösung des Vereins">
-              <p>
-                Bei Auflösung fällt das Vereinsvermögen treuhänderisch an die Gemeinde Sinzheim zur Förderung des Judosports.
-              </p>
-            </AccordionItem>
-            <AccordionItem value="volltext" title="📝 Gesamte Satzung anzeigen">
-              <pre className="whitespace-pre-wrap text-sm max-h-[500px] overflow-y-auto">
-                {satzungText}
-              </pre>
-            </AccordionItem>
-          </Accordion>
-        </CardContent>
-      </Card>
+        {/* Philosophie */}
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-4">Unsere Philosophie</h2>
+            <p className="mb-4">
+              Judo bedeutet "Der sanfte Weg" – diese Haltung prägt unsere Arbeit mit Kindern, Jugendlichen und Erwachsenen:
+            </p>
+            <ul className="list-disc list-inside space-y-1">
+              <li>Respektvolles Miteinander & gegenseitige Unterstützung</li>
+              <li>Transparente Trainingsmethoden</li>
+              <li>Nachhaltige Förderung sowohl im Breiten- als auch im Leistungssport</li>
+              <li>Familiäre Vereinsstruktur mit maximal 100 Judoka</li>
+              <li>Regelmäßige Weiterbildung der Trainer</li>
+              <li>Gruppenübergreifende Aktionen wie Judosafaris & Freundschaftsturniere</li>
+            </ul>
+          </CardContent>
+        </Card>
 
-      {/* Kontakt & Fremersberger */}
-      <Card>
-        <CardContent className="p-6">
-          <h2 className="text-2xl font-semibold mb-4">Weiterführende Informationen</h2>
-          <p>
-            Eine ausführliche Darstellung unserer Geschichte findet sich im Artikel "Fremersberger", Ausgabe 4. Erhältlich bei:
-          </p>
-          <ul className="list-disc list-inside mt-2">
-            <li>VR Bank Sinzheim</li>
-            <li>ausgewählten Sinzheimer Geschäften</li>
-          </ul>
-        </CardContent>
-      </Card>
-    </div>
+        {/* Satzung */}
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-4">Unsere Satzung</h2>
+            <Accordion type="multiple">
+              <AccordionItem value="zweck" title="§2 Vereinszweck & Gemeinnützigkeit">
+                <p>
+                  Zweck des Vereins ist die Förderung des Judosports. Der Verein ist gemeinnützig und arbeitet selbstlos.
+                </p>
+              </AccordionItem>
+              <AccordionItem value="mitgliedschaft" title="§4 Mitgliedschaft">
+                <p>
+                  Mitglied kann jede unbescholtene Person werden. Minderjährige benötigen die Zustimmung der Eltern.
+                </p>
+              </AccordionItem>
+              <AccordionItem value="vorstand" title="§9 Vorstand & Geschäftsbereiche">
+                <p>
+                  Der Vorstand setzt sich aus mehreren Ämtern zusammen und wird alle zwei Jahre gewählt.
+                </p>
+              </AccordionItem>
+              <AccordionItem value="auflösung" title="§13 Auflösung des Vereins">
+                <p>
+                  Bei Auflösung fällt das Vereinsvermögen treuhänderisch an die Gemeinde Sinzheim zur Förderung des Judosports.
+                </p>
+              </AccordionItem>
+              <AccordionItem value="volltext" title="📝 Gesamte Satzung anzeigen">
+                <pre className="whitespace-pre-wrap text-sm max-h-[500px] overflow-y-auto">
+                  {satzungText}
+                </pre>
+              </AccordionItem>
+            </Accordion>
+          </CardContent>
+        </Card>
+
+        {/* Kontakt & Fremersberger */}
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-4">Weiterführende Informationen</h2>
+            <p>
+              Eine ausführliche Darstellung unserer Geschichte findet sich im Artikel "Fremersberger", Ausgabe 4. Erhältlich bei:
+            </p>
+            <ul className="list-disc list-inside mt-2">
+              <li>VR Bank Sinzheim</li>
+              <li>ausgewählten Sinzheimer Geschäften</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </div>
+
+    </>
+
   );
 }
 
@@ -122,6 +131,8 @@ function AccordionItem({ title, value, children }) {
       </button>
       {open && <div className="p-4 border-t text-sm text-gray-700">{children}</div>}
     </div>
+
+
   );
 }
 
