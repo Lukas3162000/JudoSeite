@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function SmallHeroSection({Title, subline}) {
   return (
     <>
-      <div className="relative bg-[#400000] overflow-hidden flex py-16">
+      <div className="relative bg-[#0F1B20] overflow-hidden flex py-16">
         {/* Top Right Background Graphic */}
         <img
           src="src/assets/top_Left.svg"

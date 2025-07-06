@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function HeroSection() {
   return (
     <>
-<div className="relative bg-[#400000] overflow-hidden py-16">
+<div className="relative bg-[#0F1B20] overflow-hidden py-16">
   {/* Top Right Background Graphic */}
   <img
     src="src/assets/top_Left.svg"
@@ -31,7 +31,7 @@ export default function HeroSection() {
       <div className="flex gap-4 flex-col md:flex-row items-center">
 
         <Link to="/Training">
-         <button className="bg-[#E10000] hover:scale-105 ease-in-out duration-300 cursor-pointer text-white px-12 border-2 border-color-white py-2 rounded-full font-semibold">Training</button>
+         <button className="bg-[#C22B26] hover:scale-105 ease-in-out duration-300 cursor-pointer text-white px-12 border-2 border-color-white py-2 rounded-full font-semibold">Training</button>
         </Link>
 
         <Link to="/Kontakt">

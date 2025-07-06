@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import React from 'react'
 import HeroSection from '../components/Herosection'
+import NewsScroller from '../components/newsSection'
 
 export default function Startseite() {
 
@@ -27,6 +28,8 @@ export default function Startseite() {
           </a>
         </div>
       </section>
+
+      <NewsScroller></NewsScroller>
 
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">

@@ -9,13 +9,6 @@ export default function UnserVerein() {
       <SmallHeroSection Title={"Unser Verein"} subline={<> Zu Ehren von <strong className="font-semibold">Harald Schneider</strong>, Gründer und erster Vorsitzender des Judo Club Sinzheim e.V.</>}/>
 
       <div className="px-4 md:px-12 py-10 space-y-10 max-w-5xl mx-auto text-gray-800">
-        {/* Hero Section */}
-        <section className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Unser Verein</h1>
-          <p className="text-lg">
-            Zu Ehren von <strong>Harald Schneider</strong>, Gründer und erster Vorsitzender des Judo Club Sinzheim e.V.
-          </p>
-        </section>
 
         {/* Historie */}
         <Card>
