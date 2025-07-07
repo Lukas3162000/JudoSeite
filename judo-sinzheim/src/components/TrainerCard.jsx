@@ -1,7 +1,7 @@
 export default function TrainerCard({ name, role, dan, email, img }) {
   return (
     <a href={`mailto:${email}`} className="max-w-full md:max-w-xs">
-      <div className="flex flex-col items-center p-6 rounded-2xl shadow-sm bg-white hover:bg-slate-50 cursor-pointer">
+      <div className="flex flex-col items-center p-6 rounded-2xl shadow-sm bg-white hover:bg-[#0F1B20]/10 hover:scale-105 ease-in-out duration-300 cursor-pointer">
   {img ? (
     <img
       src={img}

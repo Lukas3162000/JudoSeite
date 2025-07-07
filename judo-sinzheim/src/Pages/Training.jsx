@@ -23,19 +23,19 @@ export default function Training() {
         <ul className="space-y-2 text-gray-700">
           <li className="flex items-center justify-between">
             <span>16:15 – 17:30 Uhr: U11/U13 </span>
-            <span className="text-sm px-2 py-0.5 rounded-full bg-green-100 text-green-800">
+            <span className="text-sm px-2 py-0.5 rounded-full bg-[#E38A87] text-[#0F1B20]">
               Anfänger
             </span>
           </li>
           <li className="flex items-center justify-between">
             <span>17:30 – 19:00 Uhr: U11/U13 </span>
-            <span className="text-sm px-2 py-0.5 rounded-full bg-blue-100 text-blue-800">
+            <span className="text-sm px-2 py-0.5 rounded-full bg-[#C22B26] text-[#F9F3EC]">
               Fortgeschrittene
             </span>
           </li>
           <li className="flex items-center justify-between">
             <span>19:00 – 20:30 Uhr: U15/U18/U21/Ü21</span>
-            <span className="text-sm px-2 py-0.5 rounded-full bg-violet-100 text-violet-800">
+            <span className="text-sm px-2 py-0.5 rounded-full bg-[#2A3338] text-[#F9F3EC]">
               Erwachsene
             </span>
           </li>
@@ -48,13 +48,13 @@ export default function Training() {
         <ul className="space-y-2 text-gray-700">
           <li className="flex items-center justify-between">
             <span>17:15 – 18:30 Uhr: U9/U11</span>
-            <span className="text-sm px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800">
+            <span className="text-sm px-2 py-0.5 rounded-full bg-[#F2E7DE] text-[#0F1B20]">
               Bambinis
             </span>
           </li>
           <li className="flex items-center justify-between">
             <span>18:30 – 20:00 Uhr: Breitensport</span>
-            <span className="text-sm px-2 py-0.5 rounded-full bg-violet-100 text-violet-800">
+            <span className="text-sm px-2 py-0.5 rounded-full bg-[#2A3338] text-[#F9F3EC]">
               Erwachsene
             </span>
           </li>
@@ -67,13 +67,13 @@ export default function Training() {
         <ul className="space-y-2 text-gray-700">
           <li className="flex items-center justify-between">
             <span>17:30 – 19:00 Uhr: U11/U13</span>
-            <span className="text-sm px-2 py-0.5 rounded-full bg-blue-100 text-blue-800">
+            <span className="text-sm px-2 py-0.5 rounded-full bg-[#C22B26] text-[#F9F3EC]">
               Fortgeschrittene
             </span>
           </li>
           <li className="flex items-center justify-between">
             <span>19:00 – 20:30 Uhr: U15/U18/U21/Ü21</span>
-            <span className="text-sm px-2 py-0.5 rounded-full bg-violet-100 text-violet-800">
+            <span className="text-sm px-2 py-0.5 rounded-full bg-[#2A3338] text-[#F9F3EC]">
               Erwachsene
             </span>
           </li>
@@ -86,7 +86,7 @@ export default function Training() {
         <ul className="space-y-2 text-gray-700">
           <li className="flex items-center justify-between">
             <span>17:15 – 18:30 Uhr: U9/U11</span>
-            <span className="text-sm px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800">
+            <span className="text-sm px-2 py-0.5 rounded-full bg-[#F2E7DE] text-[#0F1B20]">
               Bambinis
             </span>
           </li>

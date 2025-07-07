@@ -7,7 +7,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow sticky top-0 z-100">
+    <header className="bg-[#F9F3EC] shadow sticky top-0 z-100 ">
 
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center ">
         <Link to="/">
