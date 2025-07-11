@@ -133,9 +133,9 @@ export default function Training() {
         <section className="mb-12">
           <h2 className="text-xl font-semibold mb-2">Trainingsort</h2>
           <p>
-            Alle Trainings finden in der Schulturnhalle Sinzheim statt:
-            <br />
-            Schulstraße 12, 76547 Sinzheim
+            Alle Trainings finden in der St.Vinzenz-Sporthalle Sinzheim statt:
+            <br /> 
+            Kirchstraße 3, 76547 Sinzheim
           </p>
         </section>
 
@@ -144,7 +144,7 @@ export default function Training() {
           <p>
             Bei Fragen zum Ablauf oder zum passenden Training melden Sie sich gerne per E-Mail an:
             <br />
-            <a href="mailto:cheftrainer@judo-sinzheim.de" className="text-blue-600 underline">
+            <a href="mailto:cheftrainer@judo-sinzheim.de" className="text-[#C22B26] underline">
               cheftrainer@judo-sinzheim.de
             </a>
           </p>

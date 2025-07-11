@@ -7,7 +7,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-[#F9F3EC] shadow sticky top-0 z-100 ">
+    <header className="bg-[#FFFFFF] shadow sticky top-0 z-100 ">
 
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center ">
         <Link to="/">
@@ -15,7 +15,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-4 font-regular text-xl" >
+        <div className="hidden md:flex space-x-6 font-regular text-xl" >
           <Link to="/" className="hover-underline text-[#0F1B20] hover:text-[#C22B26] ">Start</Link>
           <Link to="/training" className="hover-underline text-[#0F1B20] hover:text-[#C22B26]">Training</Link>
           <Link to="/probetraining" className="hover-underline text-[#0F1B20] hover:text-[#C22B26]">Probetraining</Link>
