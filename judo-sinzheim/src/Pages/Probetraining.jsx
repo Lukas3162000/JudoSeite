@@ -96,7 +96,7 @@ export default function Probetraining() {
           <div className="grid gap-6 sm:grid-cols-2">
             {/* Anmeldung Card */}
             <div className="bg-[#FFFFFF] rounded-2xl shadow-sm p-6 text-[#0F1B20]">
-              <h2 className="text-xl font-semibold mb-2">Anmeldung</h2>
+              <h2 className="text-2xl font-semibold mb-2">Anmeldung</h2>
               <p className="mb-6 text-[#4B5563]">
                 Hat dir das Training gefallen? Melde dich einfach an! Den Anmeldebogen gibt’s bei uns vor Ort oder zum Download.
               </p>
@@ -113,7 +113,7 @@ export default function Probetraining() {
 
             {/* Kontakt & Anfahrt Card */}
             <div className="bg-[#FFFFFF] rounded-2xl shadow-sm p-6 text-[#0F1B20]">
-              <h2 className="text-xl font-semibold mb-2">Kontakt & Anfahrt</h2>
+              <h2 className="text-2xl font-semibold mb-2">Kontakt & Anfahrt</h2>
               <p className="text-m mb-6 text-[#4B5563]">
                 Bereit fürs Probetraining oder hast du noch Fragen? Wir helfen dir gern weiter – schreib uns oder schau einfach vorbei!
               </p>

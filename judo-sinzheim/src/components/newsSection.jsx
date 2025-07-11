@@ -35,7 +35,7 @@ const mockNews = [
 
 export default function NewsScroller() {
   return (
-    <section className="py-12 bg-gray-100">
+    <section className="py-12 ">
       <div className="container mx-auto px-4">
         <h3 className="text-xl font-semibold mb-2 text-[#C22B26] flex justify-center">News</h3>
         <h2 className="text-2xl font-semibold mb-6 text-[#0F1B20] flex justify-center">Aktuelles rund um den Verein</h2>
