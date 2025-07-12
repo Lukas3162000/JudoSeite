@@ -44,6 +44,7 @@ export default function Kontakt() {
               referrerPolicy="no-referrer-when-downgrade"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2683.835738192663!2d8.162016662657638!3d48.760657961625185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47971ffd226ceecf%3A0x1d42d99b9f6ecde9!2sKirchstra%C3%9Fe%203A%2C%2076547%20Sinzheim!5e1!3m2!1sde!2sde!4v1752270294286!5m2!1sde!2sde"
             ></iframe>
+            
           </div>
         </div>
       </div>

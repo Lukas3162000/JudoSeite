@@ -1,10 +1,24 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import React from 'react'
 
 import SmallHeroSection from '../components/SmallHeroSection'
 import TrainerCard from '../components/TrainerCard'
 
 export default function Training() {
+
+  const [isWide,setIsWide] = useState();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsWide(window.innerWidth > 380);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+
+  })
+
+
   return (
     <>
       <SmallHeroSection
@@ -14,73 +28,77 @@ export default function Training() {
 
       <div className="max-w-4xl mx-auto px-4 py-12 space-y-10">
 
-        {/* Trainingszeiten */}
-        <section>
-          <div className="bg-white rounded-2xl p-6 shadow-sm">
-            <h2 className="text-2xl font-semibold mb-6">Trainingszeiten</h2>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
-              {/* Dienstag */}
-              <div className="rounded-2xl p-4 bg-[#F9F9F9] shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">Dienstag</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex justify-between">
-                    <span>16:15 – 17:30 Uhr: U11/U13</span>
-                    <span className="text-sm px-2 py-0.5 rounded-full bg-[#E38A87] text-[#0F1B20]">Anfänger</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>17:30 – 19:00 Uhr: U11/U13</span>
-                    <span className="text-sm px-2 py-0.5 rounded-full bg-[#C22B26] text-white">Fortgeschrittene</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>19:00 – 20:30 Uhr: U15/U18/U21/Ü21</span>
-                    <span className="text-sm px-2 py-0.5 rounded-full bg-[#2A3338] text-white">Erwachsene</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Mittwoch */}
-              <div className="rounded-2xl p-4 bg-[#F9F9F9] shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">Mittwoch</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex justify-between">
-                    <span>17:15 – 18:30 Uhr: U9/U11</span>
-                    <span className="text-sm px-2 py-0.5 rounded-full bg-[#F2E7DE] text-[#0F1B20]">Bambinis</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>18:30 – 20:00 Uhr: Breitensport</span>
-                    <span className="text-sm px-2 py-0.5 rounded-full bg-[#2A3338] text-white">Erwachsene</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Donnerstag */}
-              <div className="rounded-2xl p-4 bg-[#F9F9F9] shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">Donnerstag</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex justify-between">
-                    <span>17:30 – 19:00 Uhr: U11/U13</span>
-                    <span className="text-sm px-2 py-0.5 rounded-full bg-[#C22B26] text-white">Fortgeschrittene</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>19:00 – 20:30 Uhr: U15/U18/U21/Ü21</span>
-                    <span className="text-sm px-2 py-0.5 rounded-full bg-[#2A3338] text-white">Erwachsene</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Freitag */}
-              <div className="rounded-2xl p-4 bg-[#F9F9F9] shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">Freitag</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex justify-between">
-                    <span>17:15 – 18:30 Uhr: U9/U11</span>
-                    <span className="text-sm px-2 py-0.5 rounded-full bg-[#F2E7DE] text-[#0F1B20]">Bambinis</span>
-                  </li>
-                </ul>
-              </div>
+   {/* Trainingszeiten */}
+<section>
+  <div className="bg-white rounded-2xl p-6 shadow-sm">
+    <h2 className="text-2xl font-semibold mb-6">Trainingszeiten</h2>
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-2">
+      
+      {/* Dienstag */}
+      <div className="rounded-2xl p-4 bg-[#F9F9F9] shadow-sm">
+        <h3 className="font-semibold text-lg mb-2">Dienstag</h3>
+        <ul className="space-y-2 text-gray-700">
+          <li className="flex justify-between items-start">
+            <span>16:15 – 17:30 Uhr: U11/U13</span>
+            <div className="flex flex-wrap gap-1 justify-end">
+              <span className="text-xs sm:text-sm px-2 py-0.5 rounded-full bg-[#E38A87] text-[#0F1B20]">Anfänger</span>
             </div>
-          </div>
-        </section>
+          </li>
+          <li className="flex justify-between items-start">
+            <span>17:30 – 19:00 Uhr: U11/U13</span>
+            <span className="text-sm px-2 py-0.5 rounded-full bg-[#C22B26] text-white">Fortgeschrittene</span>
+          </li>
+          <li className="flex justify-between items-start">
+            <span>19:00 – 20:30 Uhr: U15/U18/U21/Ü21</span>
+            <span className="text-sm px-2 py-0.5 rounded-full bg-[#2A3338] text-white">Erwachsene</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Mittwoch */}
+      <div className="rounded-2xl p-4 bg-[#F9F9F9] shadow-sm">
+        <h3 className="font-semibold text-lg mb-2">Mittwoch</h3>
+        <ul className="space-y-2 text-gray-700">
+          <li className="flex justify-between items-start">
+            <span>17:15 – 18:30 Uhr: U9/U11</span>
+            <span className="text-sm px-2 py-0.5 rounded-full bg-[#F2E7DE] text-[#0F1B20]">Bambinis</span>
+          </li>
+          <li className="flex justify-between items-start">
+            <span>18:30 – 20:00 Uhr: Breitensport</span>
+            <span className="text-sm px-2 py-0.5 rounded-full bg-[#2A3338] text-white">Erwachsene</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Donnerstag */}
+      <div className="rounded-2xl p-4 bg-[#F9F9F9] shadow-sm">
+        <h3 className="font-semibold text-lg mb-2">Donnerstag</h3>
+        <ul className="space-y-2 text-gray-700">
+          <li className="flex justify-between items-start">
+            <span>17:30 – 19:00 Uhr: U11/U13</span>
+            <span className="text-sm px-2 py-0.5 rounded-full bg-[#C22B26] text-white">Fortgeschrittene</span>
+          </li>
+          <li className="flex justify-between items-start">
+            <span>19:00 – 20:30 Uhr: U15/U18/U21/Ü21</span>
+            <span className="text-sm px-2 py-0.5 rounded-full bg-[#2A3338] text-white">Erwachsene</span>
+          </li>
+        </ul>
+      </div>
+
+      {/* Freitag */}
+      <div className="rounded-2xl p-4 bg-[#F9F9F9] shadow-sm">
+        <h3 className="font-semibold text-lg mb-2">Freitag</h3>
+        <ul className="space-y-2 text-gray-700">
+          <li className="flex justify-between items-start">
+            <span>17:15 – 18:30 Uhr: U9/U11</span>
+            <span className="text-sm px-2 py-0.5 rounded-full bg-[#F2E7DE] text-[#0F1B20]">Bambinis</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 
         {/* Altersklassen Erklärung */}
         <section>
@@ -122,11 +140,18 @@ export default function Training() {
         <section>
           <div className="bg-white rounded-2xl p-6 shadow-sm">
             <h2 className="text-2xl font-semibold mb-2">Trainingsort</h2>
-            <p>
+            <p className='mb-2'>
               Alle Trainings finden in der St. Vinzenz-Sporthalle Sinzheim statt:
-              <br />
-              Kirchstraße 3, 76547 Sinzheim
+             <strong className='font-semibold'> Kirchstraße 3, 76547 Sinzheim</strong>
             </p>
+            
+            <iframe
+              className="w-full h-64 rounded-md border"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2683.835738192663!2d8.162016662657638!3d48.760657961625185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47971ffd226ceecf%3A0x1d42d99b9f6ecde9!2sKirchstra%C3%9Fe%203A%2C%2076547%20Sinzheim!5e1!3m2!1sde!2sde!4v1752270294286!5m2!1sde!2sde"
+            ></iframe>
           </div>
         </section>
 
