@@ -20,6 +20,7 @@ export default function Header() {
           <Link to="/training" className="hover-underline text-[#0F1B20] hover:text-[#C22B26]">Training</Link>
           <Link to="/probetraining" className="hover-underline text-[#0F1B20] hover:text-[#C22B26]">Probetraining</Link>
           <Link to="/UnserVerein" className="hover-underline text-[#0F1B20] hover:text-[#C22B26]">Unser Verein</Link>
+          <Link to="/News" className="hover-underline text-[#0F1B20] hover:text-[#C22B26]">News</Link>
           <Link to="/kontakt" className="hover-underline text-[#0F1B20] hover:text-[#C22B26]">Kontakt & Anfahrt</Link>
         </div>
 
@@ -39,6 +40,7 @@ export default function Header() {
           <Link to="/training" className="block text-[#0F1B20] hover:text-[#C22B26]" onClick={() => setIsOpen(false)}>Training</Link>
           <Link to="/probetraining" className="block text-[#0F1B20] hover:text-[#C22B26]" onClick={() => setIsOpen(false)}>Probetraining</Link>
           <Link to="/UnserVerein" className="block text-[#0F1B20] hover:text-[#C22B26]" onClick={() => setIsOpen(false)}>Unser Verein</Link>
+          <Link to="/News" className="block text-[#0F1B20] hover:text-[#C22B26]" onClick={() => setIsOpen(false)}>News</Link>
           <Link to="/kontakt" className="block text-[#0F1B20] hover:text-[#C22B26]" onClick={() => setIsOpen(false)}>Kontakt & Anfahrt</Link>
         </div>
       )}

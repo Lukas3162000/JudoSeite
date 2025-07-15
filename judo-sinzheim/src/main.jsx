@@ -10,6 +10,8 @@ import Probetraining from "./Pages/Probetraining"
 import Kontakt from "./Pages/Kontakt"
 import NotFound from "./Pages/NotFound"
 import UnserVerein from "./Pages/UnserVerein";
+import News from "./Pages/News";
+import NewsDetail from "./Pages/NewsDetail";
 
 import "./index.css"
 
@@ -22,7 +24,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="training" element={<Training />} />
           <Route path="probetraining" element={<Probetraining />} />
           <Route path="UnserVerein" element={<UnserVerein />} />
+          <Route path="News" element={<News />} />
           <Route path="kontakt" element={<Kontakt />} />
+          <Route path="News/:slug" element={<NewsDetail />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

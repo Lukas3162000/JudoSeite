@@ -40,16 +40,6 @@ export default function Startseite() {
         <NewsScroller />
       </section>
 
-      {/* Bild-Sektion */}
-      <section className="py-12 px-4">
-        <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-sm">
-          <img
-            src="https://judo-sinzheim.de/wp-content/uploads/2024/12/Bild4-1024x388.png"
-            alt="Kinder beim Judo-Training"
-            className="w-full object-cover"
-          />
-        </div>
-      </section>
     </>
   )
 }
