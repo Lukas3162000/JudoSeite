@@ -21,12 +21,7 @@ export default function NewsSectionPage() {
 
     <section className="py-12">
       <div className="container mx-auto px-4">
-        <h3 className="text-xl font-semibold mb-2 text-[#C22B26] flex justify-center">
-          News
-        </h3>
-        <h2 className="text-2xl font-semibold mb-6 text-[#0F1B20] flex justify-center text-center">
-          Aktuelles rund um den Verein
-        </h2>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
           {pagedNews.map((news) => (

@@ -9,14 +9,14 @@ export default function HeroSection() {
   <img
     src="src/assets/top_Left.svg"
     alt="Top Right Graphic"
-    className="absolute top-0 right-0 w-120 z-0 pointer-events-none"
+    className="absolute top-0 right-0 w-120 z-0  opacity-0 animate-fade-slide-in-right"
   />
 
   {/* Bottom Left Background Graphic */}
   <img
     src="src/assets/bottom_right.svg"
     alt="Bottom Left Graphic"
-    className="absolute bottom-0 left-0 w-120 z-0 pointer-events-none"
+    className="absolute bottom-0 left-0 w-120 z-0 opacity-0 animate-fade-slide-in-left"
   />
 
   {/* Hero Content */}
@@ -42,21 +42,21 @@ export default function HeroSection() {
     </div>
 
     {/* Image Grid */}
-    <div className="grid grid-cols-2 grid-rows-2 gap-4">
+    <div className="grid grid-cols-2 grid-rows-2 gap-4 ">
       <img
         src="src/assets/Hero Graphic JC sinzhiem.png"
         alt="Gruppe"
-        className="row-span-2 h-[300px] object-contain"
+        className="row-span-2 h-[300px] object-contain opacity-0 animate-fade-slide-in-right delay-500"
       />
       <img
-        src="src/assets/Hero Graphic JC sinzhiem_small.png"
+        src="src/assets/Hero Graphic JC sinzhiem_small.png "
         alt="Kämpfer"
-        className="h-[140px] object-contain"
+        className="h-[140px] object-contain opacity-0 animate-fade-slide-in-right delay-1200"
       />
       <img
         src="src/assets/Hero Graphic JC sinzhiem_medium.png"
         alt="Mitte"
-        className="col-span-1 self-start justify-self-center h-[200px] object-contain"
+        className="col-span-1 self-start justify-self-center h-[200px] object-contain opacity-0 animate-fade-slide-in-right delay-1800"
       />
     </div>
   </div>
