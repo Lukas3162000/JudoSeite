@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function SmallHeroSection({Title, subline}) {
+
+
   return (
     <>
       <div className="relative bg-[#0F1B20] overflow-hidden flex py-16">
@@ -17,7 +19,7 @@ export default function SmallHeroSection({Title, subline}) {
           <img
             src="src/assets/bottom_right.svg"
             alt="Bottom Left Graphic"
-            className="absolute top-4 left-0 w-120 z-0 opacity-0 animate-fade-slide-in-left"
+            className="absolute top-[170px] sm:top-[45px] left-0 w-120 z-0 opacity-0 animate-fade-slide-in-left"
           />
    
 

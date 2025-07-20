@@ -1,26 +1,72 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import TestHeroVideo from "../assets/Video/TestHeroVideo.mp4";
+import TestHeroVideoMobile from "../assets/Video/TestHeroVideoMobile.mp4";
+
 
 export default function HeroSection() {
+
+  const [isMobileRation,setIsMobileRatio] = useState(false);
+
+  useEffect(() => {
+    const checkAspectRatio = () => {
+      const ratio = window.innerWidth / window.innerHeight;
+      setIsMobileRatio(ratio < 0.8);
+    };
+    checkAspectRatio();
+    window.addEventListener("resize", checkAspectRatio);
+    return () => window.removeEventListener("resize",checkAspectRatio);
+  }, [])
+
+
   return (
     <>
-<div className="relative bg-[#0F1B20] overflow-hidden py-16">
+<div className="relative overflow-hidden py-16">
+
+      {/* Video-Hintergrund */}
+      {isMobileRation ? (
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 blur-sm"
+          src={TestHeroVideoMobile}
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+      ) : (
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 blur-sm"
+          src={TestHeroVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+      )}
+
+      {/* Overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-10" />
+
+
+    
+
   {/* Top Right Background Graphic */}
+  
   <img
     src="src/assets/top_Left.svg"
     alt="Top Right Graphic"
-    className="absolute top-0 right-0 w-120 z-0  opacity-0 animate-fade-slide-in-right"
+    className="absolute top-0 right-0 w-120 z-11  opacity-0 animate-fade-slide-in-right"
   />
 
   {/* Bottom Left Background Graphic */}
   <img
     src="src/assets/bottom_right.svg"
     alt="Bottom Left Graphic"
-    className="absolute bottom-0 left-0 w-120 z-0 opacity-0 animate-fade-slide-in-left"
+    className="absolute bottom-0 left-0 w-120 z-11 opacity-0 animate-fade-slide-in-left"
   />
 
   {/* Hero Content */}
-  <div className="relative z-10 max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-8">
+  <div className="relative z-12 max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-8">
     
     {/* Text Content */}
     <div className="max-w-xl text-white space-y-12">
@@ -41,24 +87,28 @@ export default function HeroSection() {
       
     </div>
 
-    {/* Image Grid */}
-    <div className="grid grid-cols-2 grid-rows-2 gap-4 ">
-      <img
-        src="src/assets/Hero Graphic JC sinzhiem.png"
-        alt="Gruppe"
-        className="row-span-2 h-[300px] object-contain opacity-0 animate-fade-slide-in-right delay-500"
-      />
-      <img
-        src="src/assets/Hero Graphic JC sinzhiem_small.png "
-        alt="Kämpfer"
-        className="h-[140px] object-contain opacity-0 animate-fade-slide-in-right delay-1200"
-      />
-      <img
-        src="src/assets/Hero Graphic JC sinzhiem_medium.png"
-        alt="Mitte"
-        className="col-span-1 self-start justify-self-center h-[200px] object-contain opacity-0 animate-fade-slide-in-right delay-1800"
-      />
-    </div>
+
+      {/* Image Grid */}
+      <div className="grid grid-cols-2 grid-rows-2 gap-4 hidden lg:grid">
+        <img
+          src="src/assets/Hero Graphic JC sinzhiem.png"
+          alt="Gruppe"
+          className="row-span-2 h-[300px] object-contain opacity-0 animate-fade-slide-in-right delay-500"
+        />
+        <img
+          src="src/assets/Hero Graphic JC sinzhiem_small.png "
+          alt="Kämpfer"
+          className="h-[140px] object-contain opacity-0 animate-fade-slide-in-right delay-1200"
+        />
+        <img
+          src="src/assets/Hero Graphic JC sinzhiem_medium.png"
+          alt="Mitte"
+          className="col-span-1 self-start justify-self-center h-[200px] object-contain opacity-0 animate-fade-slide-in-right delay-1800"
+        />
+      </div>
+    
+   
+
   </div>
 </div>
 
