@@ -2,22 +2,32 @@ import React from "react";
 import mockNews from "../Data/mockNews";
 import { Link } from "react-router-dom";
 
-
-
-export default function NewsScroller() {
+export default function NewsSection() {
   return (
-    <section className="py-8 ">
-      <div className="container mx-auto px-4">
-        <h3 className="text-xl font-semibold mb-2 text-[#C22B26] flex justify-center">News</h3>
-        <h2 className="text-2xl font-semibold mb-6 text-[#0F1B20] flex justify-center text-center">Aktuelles rund um den Verein</h2>
+    <section className="pt-8 pb-4 px-4 max-w-4xl mx-auto">
+      <div className="bg-white rounded-2xl shadow-sm p-6 flex flex-col gap-6">
 
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 scroll-smooth pb-4">
+        {/* Textblock oben */}
+        <div className="text-center flex flex-col gap-4">
+          <div>
+            <h3 className="text-m font-semibold text-[#C22B26] mb-1">News</h3>
+            <h2 className="text-2xl font-semibold">Aktuelles rund um den Verein</h2>
+          </div>
+          <p className="text-gray-700 max-w-2xl mx-auto">
+            Hier findest du die neuesten Meldungen, Erfolge und Termine rund um den JC Sinzheim e.V.
+          </p>
+          <Link to="/News">
+            <button className="bg-[#C22B26] hover:bg-[#FF3B35] hover:scale-105 ease-in-out duration-300 cursor-pointer text-white px-12 py-2 rounded-full font-semibold">
+              Alle News anzeigen
+            </button>
+          </Link>
+        </div>
+
+        {/* Scrollbare News-Cards */}
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 scroll-smooth pb-2 px-1">
           {mockNews.map((news) => (
-            <Link to={`/News/${news.slug}`}>
-              <div
-                key={news.id}
-                className="snap-start min-w-[280px] min-h-[320px] max-w-xs bg-white rounded-2xl shadow-md overflow-hidden flex-shrink-0 transition-transform hover:scale-105 hover:shadow-lg"
-              >
+            <Link key={news.id} to={`/News/${news.slug}`} className="snap-start">
+              <div className="min-w-[280px] min-h-[320px] max-w-xs bg-white rounded-2xl shadow-md overflow-hidden flex-shrink-0 transition-transform hover:scale-105 hover:shadow-lg">
                 <img
                   src={news.image}
                   alt={news.title}
@@ -33,6 +43,7 @@ export default function NewsScroller() {
             </Link>
           ))}
         </div>
+
       </div>
     </section>
   );

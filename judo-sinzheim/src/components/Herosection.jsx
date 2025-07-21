@@ -4,6 +4,7 @@ import TestHeroVideo from "../assets/Video/TestHeroVideo.mp4";
 import TestHeroVideoMobile from "../assets/Video/TestHeroVideoMobile.mp4";
 
 
+
 export default function HeroSection() {
 
   const [isMobileRation,setIsMobileRatio] = useState(false);
@@ -70,19 +71,23 @@ export default function HeroSection() {
     
     {/* Text Content */}
     <div className="max-w-xl text-white space-y-12">
-      <h1 className="text-6xl font-bold ">JC SINZHEIM e.V.</h1>
-      <p className="text-2xl font-light text-white">
+      <h1 className="text-4xl sm:text-6xl font-bold ">JC SINZHEIM e.V.</h1>
+      <p className="text-xl sm:text-2xl font-light text-white">
         Unser Verein bietet ein sicheres, sportliches Umfeld für Anfänger:innen und Fortgeschrittene – jetzt Probetraining vereinbaren!
       </p>
-      <div className="flex gap-4 flex-col md:flex-row items-center">
+
+      <div className="flex gap-4 flex-col md:flex-row items-center w-full">
+
 
         <Link to="/Training">
-         <button className="bg-[#C22B26] hover:scale-105 ease-in-out duration-300 cursor-pointer text-white px-12 border-2 border-color-white py-2 rounded-full font-semibold">Training</button>
+         <button className="bg-[#C22B26] hover:bg-[#FF3B35] w-[50vw] md:w-[300px] w-1/2 hover:scale-105 ease-in-out duration-300 cursor-pointer text-white px-12 border-color-white py-2 rounded-full font-semibold">Training</button>
         </Link>
 
         <Link to="/Kontakt">
-          <button className="border cursor-pointer hover:scale-105 ease-in-out duration-300 border-white text-white px-4 py-2 rounded-full font-semibold">Kontakt & Anfahrt</button>
+          <button className=" hover:bg-[#E0E0E0] w-[50vw] md:w-[300px] cursor-pointer hover:scale-105 ease-in-out duration-300 border-black bg-white text-black px-4 py-2 rounded-full font-semibold">Kontakt & Anfahrt</button>
         </Link>
+
+
       </div>
       
     </div>

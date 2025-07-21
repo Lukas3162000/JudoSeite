@@ -4,6 +4,8 @@ import React from 'react'
 import SmallHeroSection from '../components/SmallHeroSection'
 import TrainerCard from '../components/TrainerCard'
 
+
+
 export default function Training() {
 
   const [isWide,setIsWide] = useState();
@@ -24,6 +26,7 @@ export default function Training() {
       <SmallHeroSection
         Title={"Training"}
         subline={"Hier findest du alle Informationen zu unseren Trainingszeiten, Altersgruppen und unserem Trainerteam."}
+        backgroundVideo={""}
       />
 
       <div className="max-w-4xl mx-auto px-4 py-12 space-y-10">

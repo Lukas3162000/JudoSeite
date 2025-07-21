@@ -11,9 +11,11 @@ import Kontakt from "./Pages/Kontakt"
 import NotFound from "./Pages/NotFound"
 import UnserVerein from "./Pages/UnserVerein";
 import News from "./Pages/News";
-import NewsDetail from "./Pages/NewsDetail";
+import NewsDetail from "./components/NewsDetail";
+import SponsorDetails from "./components/SponsorDetails";
 
 import "./index.css"
+import { ImportIcon } from "lucide-react";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -27,6 +29,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="News" element={<News />} />
           <Route path="kontakt" element={<Kontakt />} />
           <Route path="News/:slug" element={<NewsDetail />} />
+          <Route path="sponsors/:slug" element={<SponsorDetails />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

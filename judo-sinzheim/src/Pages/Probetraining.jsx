@@ -68,7 +68,7 @@ export default function Probetraining() {
               Egal ob Kind, Jugendlicher oder Erwachsener – hier findest du das passende Training.
             </p>
           </div>
-          <div className="bg-white rounded-b-2xl px-6 py-6 shadow-sm">
+          <div className="bg-white  rounded-b-2xl px-6 py-6 shadow-sm">
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
               {[
                 { icon: "👧", title: "Kinder ab 5 Jahren", time: "Freitag · 17:15 Uhr" },
@@ -76,7 +76,7 @@ export default function Probetraining() {
                 { icon: "👨‍🦱", title: "Jugendliche & Erwachsene", time: "Mittwoch oder Donnerstag · 19:00 Uhr" }
               ].map((item, i) => (
                 <a key={i} href="/training#/training">
-                  <div className="bg-[#F9F9F9] shadow-sm rounded-2xl md:min-h-[144px] p-4 hover:bg-[#E0E0E0] ease-in-out duration-300 hover:cursor-pointer text-center text-[#0F1B20]">
+                  <div className="bg-[#F9F9F9] hover:scale-105 shadow-sm rounded-2xl md:min-h-[144px] p-4 hover:bg-[#E0E0E0] ease-in-out duration-300 hover:cursor-pointer text-center text-[#0F1B20]">
                     <div className="text-3xl mb-2">{item.icon}</div>
                     <h3 className="font-semibold text-lg">{item.title}</h3>
                     <p className="text-[#4B5563] text-sm">{item.time}</p>
@@ -105,7 +105,7 @@ export default function Probetraining() {
                 href="https://judo-sinzheim.de/Vorlagen/aufnahmenantrag/Aufnahmeantrag_Mitgliedschaft_JCS_2020-09-24.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-[#C22b26] hover:bg-[#FF3B35] shadow-md hover:shadow-lg transition px-6 py-3 rounded-full font-medium text-white"
+                className="inline-flex items-center bg-[#C22b26] hover:scale-105 hover:bg-[#FF3B35] shadow-md hover:shadow-lg transition px-6 py-3 rounded-full font-medium text-white"
               >
                 📄 Anmeldebogen als PDF herunterladen
               </a>
@@ -119,7 +119,7 @@ export default function Probetraining() {
               </p>
               <a
                 href="#/kontakt"
-                className="inline-block bg-[#C22b26] hover:bg-[#FF3B35] shadow-md hover:shadow-lg transition px-6 py-3 rounded-full text-base font-semibold text-white"
+                className="inline-block bg-[#C22b26] hover:scale-105 hover:bg-[#FF3B35] shadow-md hover:shadow-lg transition px-6 py-3 rounded-full text-base font-semibold text-white"
               >
                 Kontakt & Anfahrt
               </a>
