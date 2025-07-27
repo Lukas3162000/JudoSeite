@@ -4,7 +4,12 @@ import React from 'react'
 import TrainerCard from "../components/TrainerCard"
 import SmallHeroSection from '../components/SmallHeroSection'
 
+import Probetraining_deso from "../assets/Video/Probetraining_DeSo.mp4";
+import Probetraining_moso from "../assets/Video/Probetraining_moso.mp4";
+
+
 export default function Probetraining() {
+
   return (
     <>
       <SmallHeroSection
@@ -15,7 +20,11 @@ export default function Probetraining() {
             Einfach vorbeikommen und mitmachen!
           </>
         }
+        backgroundVideoDeSo={Probetraining_deso}
+        backgroundVideoMoSo={Probetraining_moso}
       />
+
+      
 
       <main className="max-w-4xl mx-auto px-4 py-10 space-y-12 text-[#0F1B20]">
 
@@ -105,7 +114,7 @@ export default function Probetraining() {
                 href="https://judo-sinzheim.de/Vorlagen/aufnahmenantrag/Aufnahmeantrag_Mitgliedschaft_JCS_2020-09-24.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center bg-[#C22b26] hover:scale-105 hover:bg-[#FF3B35] shadow-md hover:shadow-lg transition px-6 py-3 rounded-full font-medium text-white"
+                className="inline-flex items-center text-center bg-[#C22b26] hover:scale-105 hover:bg-[#FF3B35] shadow-md hover:shadow-lg transition px-6 py-3 rounded-full font-medium text-white"
               >
                 📄 Anmeldebogen als PDF herunterladen
               </a>

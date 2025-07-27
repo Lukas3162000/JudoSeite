@@ -4,6 +4,8 @@ import React from 'react'
 import SmallHeroSection from '../components/SmallHeroSection'
 import TrainerCard from '../components/TrainerCard'
 
+import training_deso from "../assets/Video/training_deso.mp4";
+import training_moso from "../assets/Video/training_moso.mp4";
 
 
 export default function Training() {
@@ -26,7 +28,8 @@ export default function Training() {
       <SmallHeroSection
         Title={"Training"}
         subline={"Hier findest du alle Informationen zu unseren Trainingszeiten, Altersgruppen und unserem Trainerteam."}
-        backgroundVideo={""}
+        backgroundVideoDeSo={training_deso}
+        backgroundVideoMoSo={training_moso}
       />
 
       <div className="max-w-4xl mx-auto px-4 py-12 space-y-10">

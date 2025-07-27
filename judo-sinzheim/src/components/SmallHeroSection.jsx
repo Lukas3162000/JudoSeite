@@ -2,15 +2,31 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import TestHeroVideo from "../assets/Video/TestHeroVideo.mp4";
+import TestHeroVideoMobile from "../assets/Video/TestHeroVideoMobile.mp4";
 
-export default function SmallHeroSection({Title, subline, backgroundVideo }) {
-  const videoSrc = backgroundVideo || TestHeroVideo;
+
+export default function SmallHeroSection({Title, subline, backgroundVideoDeSo, backgroundVideoMoSo }) {
+
+  {/* Hier wird gecheckt, ob ein Video übergeben wurde. Wenn Ja wird dieses gestezt, wenn nein wird ein Standard-Video gesetzt*/}
+  
+  const videoSrcDeSo = backgroundVideoDeSo || TestHeroVideo;
+  const videoSrcMoSo = backgroundVideoMoSo || TestHeroVideoMobile;
+
+    const [isMobileRation,setIsMobileRatio] = useState(false);
+  
+    useEffect(() => {
+      const checkAspectRatio = () => {
+        const ratio = window.innerWidth / window.innerHeight;
+        setIsMobileRatio(ratio < 0.8);
+      };
+      checkAspectRatio();
+      window.addEventListener("resize", checkAspectRatio);
+      return () => window.removeEventListener("resize",checkAspectRatio);
+    }, [])
 
   return (
+
     <>
-
-
-
 
       <div className="relative bg-[#0F1B20] overflow-hidden flex py-16">
         {/* Top Right Background Graphic */}
@@ -29,15 +45,25 @@ export default function SmallHeroSection({Title, subline, backgroundVideo }) {
           />
    
         {/* Background-Video */}
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover z-0 blur-sm"
-          src={videoSrc}
-          autoPlay
-          muted
-          loop
-          playsInline
-        />
-            
+        {isMobileRation ? (
+          <video
+            className="absolute top-0 left-0 w-full h-full object-cover z-0 blur-sm"
+            src={videoSrcMoSo}
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        ) : (
+          <video
+            className="absolute top-0 left-0 w-full h-full object-cover z-0 blur-sm"
+            src={videoSrcDeSo}
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        )}
       
         {/* Overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-1" />

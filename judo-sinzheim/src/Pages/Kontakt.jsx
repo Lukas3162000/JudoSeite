@@ -3,12 +3,17 @@ import React from 'react'
 
 import SmallHeroSection from '../components/SmallHeroSection'
 
+import Kontakt_DeSo from "../assets/Video/Kontakt_DeSo.mp4";
+import Kontakt_MoSo from "../assets/Video/Kontakt_MoSo.mp4";
+
 export default function Kontakt() {
   return (
     <>
       <SmallHeroSection
         Title={"Kontakt & Anfahrt"}
         subline={"Klarer Weg zum ersten Wurf – so erreichst du uns."}
+        backgroundVideoDeSo={Kontakt_DeSo}
+        backgroundVideoMoSo={Kontakt_MoSo}
       />
 
       <div className="max-w-3xl mx-auto px-4 py-12">

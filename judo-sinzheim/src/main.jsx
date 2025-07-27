@@ -13,6 +13,7 @@ import UnserVerein from "./Pages/UnserVerein";
 import News from "./Pages/News";
 import NewsDetail from "./components/NewsDetail";
 import SponsorDetails from "./components/SponsorDetails";
+import HaraldSchneiderEhrenseite from "./Pages/Haraldschneider";
 
 import "./index.css"
 import { ImportIcon } from "lucide-react";
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="UnserVerein" element={<UnserVerein />} />
           <Route path="News" element={<News />} />
           <Route path="kontakt" element={<Kontakt />} />
+          <Route path="HaraldSchneider" element={<HaraldSchneiderEhrenseite />} />
           <Route path="News/:slug" element={<NewsDetail />} />
           <Route path="sponsors/:slug" element={<SponsorDetails />} />
           <Route path="*" element={<NotFound />} />
