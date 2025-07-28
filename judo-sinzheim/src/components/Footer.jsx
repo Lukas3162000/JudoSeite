@@ -1,7 +1,15 @@
 import React from "react";
 import { Facebook, Instagram } from "lucide-react";
-import FranzGraf from "../assets/Sponsors/FranzGraf.svg";
 import { Link } from "react-router-dom";
+
+import FranzGraf from "../assets/Sponsors/FranzGraf.svg";
+import FranzGrafLogo from "../assets/Sponsors/white/Franz_Graf_white.svg"
+import gerstemaierBauschatzLogo from "../assets/Sponsors/white/gerstemaier_bauschatz_white.svg"
+import HaarscharfLogo from "../assets/Sponsors/white/Haarscharf_white.svg"
+import nKommLogo from "../assets/Sponsors/white/n-komm_white.svg"
+import PflegeSeiertLogo from "../assets/Sponsors/white/Pflege_Seiert_white.svg"
+import schoeckLogo from "../assets/Sponsors/white/schoeck_white.svg"
+
 
 export default function Footer() {
   return (
@@ -80,26 +88,39 @@ export default function Footer() {
             <a href="https://www.schoeck.de/de/home" target="_blank" rel="noopener noreferrer">
               <img src="https://www.judo-sinzheim.de/start-Dateien/Logo_Schoeck_DE_2017_RGB.jpg" alt="Schöck" className="h-16" />
             </a>
+
             <a href="https://www.n-komm.de" target="_blank" rel="noopener noreferrer">
               <img src="https://judo-sinzheim.de/Bilder/2016/image004.png" alt="n-komm" className="h-16" />
             </a>
+
             <a href="https://www.judo-sinzheim.de/pflegeseiert.htm" target="_blank" rel="noopener noreferrer">
               <img src="https://www.judo-sinzheim.de/start-Dateien/image006.png" alt="Pflegeseiert" className="h-16" />
             </a>
+
             <a href="https://www.haarscharf-buehl.de" target="_blank" rel="noopener noreferrer">
               <img src="https://www.judo-sinzheim.de/start-Dateien/image008.png" alt="Haarscharf" className="h-16" />
             </a>
+
             <Link to="/sponsors/franz-graf">
               <img src={FranzGraf} alt="Franz Graf" className="h-16" />
             </Link>
+
+            <Link to="/sponsors/gerstenmaier-bauschatz">
+              <img src={gerstemaierBauschatzLogo} alt="Gerstenmaier-Bauschatz-logo" className="h-16" />
+            </Link>
+
             <a href="https://www.gerstenmaier.com/" target="_blank" rel="noopener noreferrer">
               <img src="https://www.judo-sinzheim.de/start-Dateien/image012.png" alt="Gerstenmaier" className="h-16" />
             </a>
+
             <a href="https://www.ek-architekten.de/" target="_blank" rel="noopener noreferrer">
               <img src="https://www.judo-sinzheim.de/start-Dateien/image014.png" alt="EK Architekten" className="h-16" />
             </a>
+
           </div>
+
         </div>
+
       </div>
     </footer>
   );
