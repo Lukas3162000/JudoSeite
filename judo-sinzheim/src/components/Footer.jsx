@@ -10,10 +10,11 @@ import nKommLogo from "../assets/Sponsors/white/n-komm_white.svg"
 import PflegeSeiertLogo from "../assets/Sponsors/white/Pflege_Seiert_white.svg"
 import schoeckLogo from "../assets/Sponsors/white/schoeck_white.svg"
 
+import BJVLogo from "../assets/SVGs/BJV_white.svg"
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white text-sm pt-10 pb-6 mt-12">
+    <footer className="bg-[#0F1B20] text-white text-sm pt-10 pb-6 mt-12">
       <div className="max-w-7xl mx-auto px-4 flex flex-col gap-10">
 
         {/* Top Row: Info & Social */}
@@ -49,8 +50,8 @@ export default function Footer() {
 
         {/* Verbands-Badges */}
         <div className="flex flex-wrap justify-center gap-6">
-          <div className="text-center">
-            <p className="mb-2">Zertifizierter Verein im Deutschen Judo-Bund e.V.</p>
+          <div className="text-center ">
+            <p className="mb-2 ">Zertifizierter Verein im Deutschen Judo-Bund e.V.</p>
             <a
               href="https://www.judobund.de"
               target="_blank"
@@ -61,21 +62,23 @@ export default function Footer() {
                 alt="DJB Zertifikat"
                 width={80}
                 height={80}
+                className="mx-auto"
               />
             </a>
           </div>
-          <div className="text-center">
-            <p className="mb-2">Mitglied im Badischen Judo Verband e.V.</p>
+
+          <div className="text-center ">
+            <p className="mb-2 ">Mitglied im Badischen Judo Verband e.V.</p>
             <a
               href="http://www.badischer-judo-verband.de"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="https://www.judo-sinzheim.de/Bilder/2016/bjv.png"
+                src={BJVLogo}
                 alt="BJV Logo"
-                width={80}
-                height={80}
+                width={200}
+                className="mx-auto"
               />
             </a>
           </div>
@@ -83,23 +86,24 @@ export default function Footer() {
 
         {/* Sponsoren */}
         <div className="text-center">
-          <p className="font-semibold mb-4">Ein ganz großes Dankeschön unseren Unterstützern:</p>
-          <div className="flex flex-wrap justify-center gap-4 items-center">
-            <a href="https://www.schoeck.de/de/home" target="_blank" rel="noopener noreferrer">
-              <img src="https://www.judo-sinzheim.de/start-Dateien/Logo_Schoeck_DE_2017_RGB.jpg" alt="Schöck" className="h-16" />
-            </a>
+          <p className="font-semibold mb-4 ">Ein ganz großes Dankeschön unseren Unterstützern:</p>
+          <div className="flex flex-wrap justify-center gap-10 items-center">
 
-            <a href="https://www.n-komm.de" target="_blank" rel="noopener noreferrer">
-              <img src="https://judo-sinzheim.de/Bilder/2016/image004.png" alt="n-komm" className="h-16" />
-            </a>
+            <Link to="/sponsors/ambulante-pflege-seiert">
+              <img src={PflegeSeiertLogo} alt="Ambulante Pflege Seiert" className="h-16" />
+            </Link>
 
-            <a href="https://www.judo-sinzheim.de/pflegeseiert.htm" target="_blank" rel="noopener noreferrer">
-              <img src="https://www.judo-sinzheim.de/start-Dateien/image006.png" alt="Pflegeseiert" className="h-16" />
-            </a>
+            <Link to="/sponsors/haarscharf-buehl">
+              <img src={HaarscharfLogo} alt="Haarscharf Friseursalon Logo" className="h-16" />
+            </Link>
 
-            <a href="https://www.haarscharf-buehl.de" target="_blank" rel="noopener noreferrer">
-              <img src="https://www.judo-sinzheim.de/start-Dateien/image008.png" alt="Haarscharf" className="h-16" />
-            </a>
+            <Link to="/sponsors/n-komm">
+              <img src={nKommLogo} alt="n-komm" className="h-16" />
+            </Link>
+
+            <Link to="/sponsors/schoeck-bauteile">
+              <img src={schoeckLogo} alt="Schoeck GmbH" className="h-16" />
+            </Link>
 
             <Link to="/sponsors/franz-graf">
               <img src={FranzGraf} alt="Franz Graf" className="h-16" />
@@ -109,13 +113,6 @@ export default function Footer() {
               <img src={gerstemaierBauschatzLogo} alt="Gerstenmaier-Bauschatz-logo" className="h-16" />
             </Link>
 
-            <a href="https://www.gerstenmaier.com/" target="_blank" rel="noopener noreferrer">
-              <img src="https://www.judo-sinzheim.de/start-Dateien/image012.png" alt="Gerstenmaier" className="h-16" />
-            </a>
-
-            <a href="https://www.ek-architekten.de/" target="_blank" rel="noopener noreferrer">
-              <img src="https://www.judo-sinzheim.de/start-Dateien/image014.png" alt="EK Architekten" className="h-16" />
-            </a>
 
           </div>
 
