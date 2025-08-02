@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import React from "react";
+
 import { Menu, X } from "lucide-react";
+import JCSLogo from "../assets/Logo/DeSo Logo 64px.svg";
+
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +14,7 @@ export default function Header() {
 
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center ">
         <Link to="/">
-          <img src="src\assets\Logo\DeSo Logo 64px.svg" alt="Logo_Judo_Club_Sinzheim" />
+          <img src={JCSLogo} alt="Logo_Judo_Club_Sinzheim" />
         </Link>
 
         {/* Desktop Menu */}

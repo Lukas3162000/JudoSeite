@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import TestHeroVideo from "../assets/Video/TestHeroVideo.mp4";
 import TestHeroVideoMobile from "../assets/Video/TestHeroVideoMobile.mp4";
 
+import TopRightGraphic from "../assets/top_Left.svg";
+import BottomLeftGraphic from "../assets/bottom_right.svg";
+
 
 export default function SmallHeroSection({Title, subline, backgroundVideoDeSo, backgroundVideoMoSo }) {
 
@@ -31,7 +34,7 @@ export default function SmallHeroSection({Title, subline, backgroundVideoDeSo, b
       <div className="relative bg-[#0F1B20] overflow-hidden flex py-16">
         {/* Top Right Background Graphic */}
         <img
-          src="src/assets/top_Left.svg"
+          src={TopRightGraphic}
           alt="Top Right Graphic"
           className="absolute top-0 right-0 w-120 z-2 opacity-0 animate-fade-slide-in-right"
         />
@@ -39,7 +42,7 @@ export default function SmallHeroSection({Title, subline, backgroundVideoDeSo, b
         {/* Bottom Left Background Graphic */}
    
           <img
-            src="src/assets/bottom_right.svg"
+            src={BottomLeftGraphic}
             alt="Bottom Left Graphic"
             className="absolute top-[170px] sm:top-[45px] left-0 w-120 z-2 opacity-0 animate-fade-slide-in-left"
           />

@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import TestHeroVideo from "../assets/Video/TestHeroVideo.mp4";
 import TestHeroVideoMobile from "../assets/Video/TestHeroVideoMobile.mp4";
+
+import TopRightGraphic from "../assets/top_Left.svg";
+import BottomLeftGraphic from "../assets/bottom_right.svg";
+
+import BiggestPicture from "../assets/Hero Graphic JC sinzhiem.png";
+import MidSizedPicture from "../assets/Hero Graphic JC sinzhiem_medium.png";
+import SmallestPicture from "../assets/Hero Graphic JC sinzhiem_small.png";
+
 
 
 
@@ -54,7 +63,7 @@ export default function HeroSection() {
   {/* Top Right Background Graphic */}
   
   <img
-    src="src/assets/top_Left.svg"
+    src={TopRightGraphic}
     alt="Top Right Graphic"
     className="absolute top-0 right-0 w-120 z-11  opacity-0 animate-fade-slide-in-right"
   />
@@ -96,17 +105,17 @@ export default function HeroSection() {
       {/* Image Grid */}
       <div className="grid grid-cols-2 grid-rows-2 gap-4 hidden lg:grid">
         <img
-          src="src/assets/Hero Graphic JC sinzhiem.png"
+          src={BiggestPicture}
           alt="Gruppe"
           className="row-span-2 h-[300px] object-contain opacity-0 animate-fade-slide-in-right delay-500"
         />
         <img
-          src="src/assets/Hero Graphic JC sinzhiem_small.png "
+          src={SmallestPicture}
           alt="Kämpfer"
           className="h-[140px] object-contain opacity-0 animate-fade-slide-in-right delay-1200"
         />
         <img
-          src="src/assets/Hero Graphic JC sinzhiem_medium.png"
+          src={MidSizedPicture}
           alt="Mitte"
           className="col-span-1 self-start justify-self-center h-[200px] object-contain opacity-0 animate-fade-slide-in-right delay-1800"
         />
