@@ -70,7 +70,7 @@ export default function HeroSection() {
 
   {/* Bottom Left Background Graphic */}
   <img
-    src="src/assets/bottom_right.svg"
+    src={BottomLeftGraphic}
     alt="Bottom Left Graphic"
     className="absolute bottom-0 left-0 w-120 z-11 opacity-0 animate-fade-slide-in-left"
   />
